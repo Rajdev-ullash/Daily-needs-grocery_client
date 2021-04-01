@@ -10,6 +10,18 @@ const Orders = () => {
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [orders])
+
+
+    let total = 0;
+    for (let i = 0; i < orders.length; i++) {
+        const product = orders[i];
+        total = (total + product.product?.price * 1);
+    }
+
+    const formatNumber = num => {
+        const precision = num.toFixed(2);
+        return Number(precision);
+    }
     return (
         <div>
             <h1 className="text-danger mt-3 justify-content-center align-items-center d-flex rounded-3">Order Details</h1>
@@ -48,7 +60,14 @@ const Orders = () => {
                                     </tr>
                                 ))
 
+
                             }
+                            <tr>
+                                <td>Total</td>
+                                <td></td>
+                                <td></td>
+                                <td>$ {formatNumber(total)}</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
