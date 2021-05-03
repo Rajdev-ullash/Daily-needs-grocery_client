@@ -5,7 +5,7 @@ live site link: https://daily-needs-f3d44.web.app/
 Features:
 <br>
 1.It's completely a MERN project.<br />
-2.In this project Ever one can add product<br />
+2.In this project Every one can add product<br />
 3.Any one can buy product<br />
 4.Specific Product Details<br />
 5.User can purchase any item & see this order on Dashboard.<br />
